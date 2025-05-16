@@ -8,9 +8,9 @@ from pdf2image import convert_from_path  # Added for PDF to image conversion
 
 # --- Configuration ---
 # If Tesseract is not in your PATH, you'll need to set the tesseract_cmd
-# Example for macOS if installed via Homebrew:
-pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract'
-# Ensure poppler is installed for pdf2image: brew install poppler
+# For deployment, ensure Tesseract is installed in the environment and accessible via PATH.
+# pytesseract.pytesseract.tesseract_cmd = r'/opt/homebrew/bin/tesseract' # This line should be commented out or removed for deployment
+# Ensure poppler is installed for pdf2image.
 # Example for Windows:
 # pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 # For pdf2image on Windows, you might need to provide the poppler path to convert_from_path
